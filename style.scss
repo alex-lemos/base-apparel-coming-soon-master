@@ -120,8 +120,17 @@ body{
                     cursor: pointer;
 
                     &:hover{
-                        background: $gradient-1;
-                        box-shadow: 0px 16px 44px -8px $desaturated-red;
+                        background: $desaturated-red;
+                        box-shadow: 0px 16px 44px -8px $gradient-1;
+
+                    }
+
+                    &::after{
+                        content: url("./images/icon-error.svg");
+
+                        position: absolute;
+
+                        right: 115%;
 
                     }
 

@@ -118,9 +118,15 @@ body .container .container-call .text-forms .forms__btn {
 }
 
 body .container .container-call .text-forms .forms__btn:hover {
-  background: linear-gradient(135deg, white, #fff5f5);
-  -webkit-box-shadow: 0px 16px 44px -8px #ce9797;
-          box-shadow: 0px 16px 44px -8px #ce9797;
+  background: #ce9797;
+  -webkit-box-shadow: 0px 16px 44px -8px linear-gradient(135deg, white, #fff5f5);
+          box-shadow: 0px 16px 44px -8px linear-gradient(135deg, white, #fff5f5);
+}
+
+body .container .container-call .text-forms .forms__btn::after {
+  content: url("./images/icon-error.svg");
+  position: absolute;
+  right: 115%;
 }
 
 body .container .container-poster {
