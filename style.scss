@@ -100,7 +100,7 @@ body{
                         border-color: $soft-red;
                         outline: 0;
                     }
-                    
+
                 }
 
                 .forms__btn{
@@ -125,15 +125,31 @@ body{
 
                     }
 
-                    &::after{
-                        content: url("./images/icon-error.svg");
-
+                    .btn__error{
                         position: absolute;
 
-                        right: 115%;
+                        cursor: default;
 
+                        right: 115%;
                     }
 
+                    .btn__error--hidden{
+                        display: none;
+                    }
+
+                }
+
+                .forms__msg{
+                    padding-top: 10px;
+                    padding-left: 30px;
+
+                    color: $soft-red;
+
+                    font-size: 14px;
+                }
+
+                .forms__msg--hidden{
+                    display: none;
                 }
 
             }

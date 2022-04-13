@@ -123,10 +123,25 @@ body .container .container-call .text-forms .forms__btn:hover {
           box-shadow: 0px 16px 44px -8px linear-gradient(135deg, white, #fff5f5);
 }
 
-body .container .container-call .text-forms .forms__btn::after {
-  content: url("./images/icon-error.svg");
+body .container .container-call .text-forms .forms__btn .btn__error {
   position: absolute;
+  cursor: default;
   right: 115%;
+}
+
+body .container .container-call .text-forms .forms__btn .btn__error--hidden {
+  display: none;
+}
+
+body .container .container-call .text-forms .forms__msg {
+  padding-top: 10px;
+  padding-left: 30px;
+  color: #f96262;
+  font-size: 14px;
+}
+
+body .container .container-call .text-forms .forms__msg--hidden {
+  display: none;
 }
 
 body .container .container-poster {

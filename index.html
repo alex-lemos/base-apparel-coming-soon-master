@@ -7,6 +7,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
 
+  <script src="script.js" defer></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
@@ -42,11 +44,13 @@
 
         </p>
 
-        <form action="" class="text-forms">
+        <form class="text-forms">
 
           <input class="forms__email" type="email" name="" id="" placeholder="Email Address">
           
-          <button class="forms__btn"><img src="./images/icon-arrow.svg" alt="" class="btn__icon"></button>
+          <button class="forms__btn"><img src="./images/icon-arrow.svg" alt="" class="btn__icon"><img src="./images/icon-error.svg" alt="" class="btn__error btn__error--hidden"></button>
+
+          <p class="forms__msg forms__msg--hidden">Please provide a valid email</p>
   
         </form>
 
