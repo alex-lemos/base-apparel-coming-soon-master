@@ -1,46 +1,39 @@
 // # GLOBAL
 
-let btnSend = document.querySelector(".forms__btn");
 let btnError = document.querySelector(".btn__error");
 let msgError = document.querySelector(".forms__msg");
 let inputEmail = document.querySelector(".forms__email");
+let form = document.querySelector(".text-forms");
 
 // # EVENT
 
-btnSend.addEventListener("click", sendEmail);
 inputEmail.addEventListener("invalid", invalidMsg);
 
 // # FUNCTION
 
-function sendEmail(){
-
-    let status = btnError.classList.contains("btn__error--hidden");
-
-    if (status == false){
-
-        btnError.classList.toggle("btn__error--hidden");
-        msgError.classList.toggle("forms__msg--hidden");
-
-    }
-
-    console.log("f")
-}
-
 function invalidMsg(){
 
-    inputEmail.setCustomValidity(" ");
+    // remove mensagens de erro padrão
+   this.setCustomValidity("");
 
-    let status = btnError.classList.contains("btn__error--hidden");
+   // faz a validação novamente
+   if (!this.validity.valid) {
+       // se estiver inválido, coloca a mensagem
+       this.setCustomValidity(" ");
 
-    if (status == true){
-
-        btnError.classList.toggle("btn__error--hidden");
-        msgError.classList.toggle("forms__msg--hidden");
+        btnError.classList.remove("btn__error--hidden");
+        msgError.classList.remove("forms__msg--hidden");
 
     }
-    
+    else{
 
-    // btnError.classList.toggle("btn__error--hidden");
-    // msgError.classList.toggle("forms__msg--hidden");
+        this.setCustomValidity(" ");
+
+        btnError.classList.add("btn__error--hidden");
+        msgError.classList.add("forms__msg--hidden");
+
+        form.submit();
+
+    }
 
 }
